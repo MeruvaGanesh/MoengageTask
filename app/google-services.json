@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1069011701601",
+    "project_id": "moengage-task",
+    "storage_bucket": "moengage-task.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069011701601:android:6f548b2b41fa7e8e393f20",
+        "android_client_info": {
+          "package_name": "in.com.moengagetask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069011701601-pecj0p6se1cdgqncr4oc6i1h4sf8psbj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5i6YICefBVL3vjF44gXPOlzKW_xUJEfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069011701601-pecj0p6se1cdgqncr4oc6i1h4sf8psbj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
