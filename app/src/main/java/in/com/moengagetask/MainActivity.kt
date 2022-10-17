@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         client.newCall(request).enqueue(object : Callback {
 
             override fun onFailure(call: Call, e: IOException) {
-                TODO("Not yet implemented")
+                Log.v("ERROR", "Failed to execute URL")
             }
 
             override fun onResponse(call: Call, response: Response) {
@@ -67,8 +67,10 @@ class MainActivity : AppCompatActivity() {
 
                 }
 
+                var sortedArrayListDetails = arrayListDetails.sortedWith(compareBy { it.date }).reversed()
+
                 runOnUiThread {
-                    val objAdapter = CustomAdapter(applicationContext, arrayListDetails)
+                    val objAdapter = CustomAdapter(applicationContext, sortedArrayListDetails)
                     var urlOfContent = ""
                     listViewDetails.adapter = objAdapter
                     listViewDetails.setOnItemClickListener { parent, view, position, id ->
@@ -92,24 +94,5 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun timestampToEpochSeconds(srcTimestamp: String?): Long {
-        var epoch: Long = 0
-        try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                val instant: Instant = Instant.parse(srcTimestamp)
-                epoch = instant.getEpochSecond()
-            } else {
-                val sdf = SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss.SSSSSS'Z'", Locale.getDefault())
-                sdf.setTimeZone(TimeZone.getTimeZone("UTC"))
-                val date: Date = sdf.parse(srcTimestamp)
-                if (date != null) {
-                    epoch = date.getTime() / 1000
-                }
-            }
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-        return epoch
-    }
 
 }

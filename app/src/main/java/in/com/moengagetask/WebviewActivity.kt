@@ -1,13 +1,10 @@
 package `in`.com.moengagetask
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 
 
 class WebviewActivity : AppCompatActivity() {

@@ -1,7 +1,6 @@
 package `in`.com.moengagetask
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,10 +9,10 @@ import android.widget.ImageView
 import android.widget.TextView
 
 
-class CustomAdapter(context: Context, arrayListDetails: ArrayList<Model>) : BaseAdapter(){
+class CustomAdapter(context: Context, arrayListDetails: List<Model>) : BaseAdapter(){
 
     private val layoutInflater: LayoutInflater = LayoutInflater.from(context)
-    private val arrayListDetails:ArrayList<Model> = arrayListDetails
+    private val arrayListDetails: List<Model> = arrayListDetails
 
     override fun getCount(): Int {
         return arrayListDetails.size
